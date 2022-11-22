@@ -23,7 +23,7 @@ public class Chest : MonoBehaviour
     public Effects ownEffect;
     public int scoreCount = 100;
 
-    public GameObject stars;
+    public GameObject chest;
 
     private void Awake()
     {
@@ -43,6 +43,6 @@ public class Chest : MonoBehaviour
         isOpen = true;
         _animator.SetBool("isOpen", true);
         Destroy(gameObject, openTime);
-        Instantiate(stars, new Vector2(transform.position.x, transform.position.y - 0.5f), Quaternion.identity);
+        Instantiate(chest, new Vector2(transform.position.x, transform.position.y - 0.5f), Quaternion.identity);
     }
 }
